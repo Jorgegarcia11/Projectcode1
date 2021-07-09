@@ -1,0 +1,168 @@
+/*Inicio del diseño de la pregunta y respuesta - 1*/
+.grilla_1{
+    display: grid; /*Se coloca el display junto al grid-template porque son terminos relacionados*/
+    grid-template-columns: repeat(2, 1fr); /*Lo divide en columnas de 2*/
+    grid-gap: 54px; /*La distancia entre cada uno de ellos*/
+    padding: 400px;
+    margin-top: -40px;
+    
+}
+
+.boton_item{ /*Opciones*/
+    display: flex; /*El display permite jugar libremente, hace cambios, poner siempre display*/
+    justify-content: center; /*El texto lo pone en el centro*/
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(15, 127, 172);
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 50px; /*Tamaño de los botones*/
+    
+}
+.boton_item:hover{ /*Para cuando pases el mouse sobre el div/boton cambie de color*/
+    background: black;
+}
+
+.boton_item2{ /*Boton que aparece dando a entender a la funcion siguiente pregunta*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(15, 127, 172);
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 89px;
+    height: 39px;
+    margin-left: 905px;
+    margin-top: -340px;
+}
+
+.boton_item2:hover{
+    background: black;
+}
+
+h1{ /*La pregunta */
+    background-color: rgb(15, 127, 172);
+    text-align: center;
+    color: white;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    width: 680px;
+    /*margin: 0px auto; hay dos valores, el primero es hacia arriba y abajo, el segundo es izq o derecha, todo esto para posicionar*/
+    position: fixed; /*Colocas manualmente con top, left, right*/
+    top: 171px;
+    left: 592px;
+    border-radius: 30px;  /*Lo hace circular*/
+}
+/*Fin del diseño de la pregunta y respuesta - 1*/
+
+/*Extras - 1*/
+.green{
+    background-color: rgb(21, 173, 21);
+}
+
+.red{
+    background-color: red;
+}
+
+.disabledbutton{ /*Esta clase es creada solo en css para desactivar el hover, lo activas usando JS*/
+    pointer-events: none; /*Para desactivar el hover*/
+    opacity: 0.5;
+}
+
+.desapareceboton1{
+    display: none;
+}
+/*Fin de extras*/
+
+/*Inicio de diseño de la pregunta y respuesta - 2*/
+.grilla_2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 54px;
+    padding: 400px;
+    margin: -800px 0;
+}
+
+.boton_item3{ /*Botones de las opciones*/
+    display: none; /*El display permite jugar libremente, hace cambios, poner siempre display*/
+    justify-content: center; /*El texto lo pone en el centro*/
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(15, 127, 172);
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 50px; /*Tamaño de los botones*/
+    
+}
+
+.boton_item3:hover{
+    background-color: black;
+}
+
+.boton_item4{ /*Boton "Siguiente"*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(15, 127, 172);
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 89px;
+    height: 39px;
+    margin-left: 905px;
+    margin-top: 459px;
+}
+
+.boton_item4:hover{
+    background-color: black;
+}
+
+.pregunta2{ /*La pregunta 2*/
+    display: none;
+    background-color: rgb(15, 127, 172);
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 22px;
+    width: 676.1px;
+    position: fixed; /*Colocas manualmente con top, left, right*/
+    top: 190.5px;
+    left: 592px;
+    border-radius: 30px;
+    font-size: 130%;
+}
+
+/*Fin de diseño de la pregunta y respuesta - 2*/
+
+/*Extras - 2*/
+.answer2{ /*Para que aparezca las opciones de la pregunta 2, relacionado boton_item3*/
+    display: flex;
+}
+
+.question2{ /*Para que aparezca la pregunta 2, relacionado pregunta2*/
+    display: flex;
+}
+
+.red2{ /*Se crea otra funcion para el cambio de color, no puede ser el mismo*/
+    background-color: red;
+}
+
+.green2{
+    background-color: rgb(21, 173, 21);
+}
+
+.disabledbutton2{ /*Esta clase es creada solo en css para desactivar el hover, lo activas usando JS*/
+    pointer-events: none; /*Para desactivar el hover*/
+    opacity: 0.5;
+}
+/*Fin de extras*/
