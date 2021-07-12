@@ -5,6 +5,8 @@ let boton4 = document.getElementById("accion_4");
 
 let botonsig = document.getElementById("siguiente");
 
+let pCorrectas = [];
+
 //Pregunta 1
 //Eventos de los botones que haran cuando el usuario haga click
 
@@ -15,6 +17,7 @@ boton1.addEventListener("click", () =>{
     ocultar()
     next()
     deshabilitarboton1()
+    pCorrectas.push(pCorrectas.length);
 })
 
 boton2.addEventListener("click", () =>{
@@ -90,6 +93,7 @@ boton7.addEventListener("click", () =>{
     boton7.classList.add("green2")
     deshabilitarboton2()
     next2()
+    pCorrectas.push(pCorrectas.length);
 })
 
 boton8.addEventListener("click", () =>{
@@ -131,6 +135,18 @@ function next2(){ //Aparece el boton siguiente (Para la proxima pregunta)
     botonsig2.style.display = "flex";
 }
 
-function finalizar() {
-    swal("Has finalizado el quiz, gracias por participar!");
+function finalizar() { //Resultados
+    contadorRespuestas()
+}
+
+function contadorRespuestas(){ //Funcion de resultados
+    if(pCorrectas.length == 1){
+        swal("Has finalizado el quiz", "Obtuvistes 1 de 2 preguntas correctas");
+    }
+    else if(pCorrectas.length == 2){
+        swal("Has finalizado el quiz","Obtuvistes 2 de 2 preguntas correctas");
+    }
+    else if(pCorrectas.length == 0){
+        swal("Has finalizado el quiz","Obtuvistes 0 de 2 preguntas correctas");
+    }
 }
