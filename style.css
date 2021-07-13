@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(124, 119, 119, 0.568)
+}
 /*Inicio del diseño de la pregunta y respuesta - 1*/
 .grilla_1{
     display: grid; /*Se coloca el display junto al grid-template porque son terminos relacionados*/
